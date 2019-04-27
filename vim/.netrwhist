@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/luisliz/Documents/GitHub/WOC_Website/woc/src/environments'
+let g:netrw_dirhist_2='/Users/luisliz/Documents/GitHub/WOC_Website/.git'
+let g:netrw_dirhist_3='/Users/luisliz/Google Drive/*Negocios/Forex/My Strategy/Indicators'
+let g:netrw_dirhist_4='/Users/luisliz/.vim'
