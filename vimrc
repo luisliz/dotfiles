@@ -1,5 +1,6 @@
 syntax on
 :set number
+:set cursorline 
 
 "Plugins" 
 call plug#begin('~/.vim/plugged')
