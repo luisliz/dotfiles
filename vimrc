@@ -18,8 +18,17 @@ colorscheme gruvbox
 set background=dark
 let g:gruvbox_contrast_dark = 'hard' 
 
+"***NO REMAPS***" 
+"Tab remaps" 
 noremap tn :tabnew<Space> 
 noremap tk :tabnext<CR> 
-noremap tj :tabprev<CR> 
+noremap tj :tabprev<CR>
 
-map <F6> :setlocal spell~ spelllang=en_us<CR> 
+"Split Navigations" 
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"spell check english" 
+map <F6> :setlocal spell! spelllang=en_us<CR> 
