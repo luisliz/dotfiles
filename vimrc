@@ -1,7 +1,9 @@
 filetype plugin on
 syntax on
-:set number
-:set cursorline 
+set number
+set cursorline 
+set splitbelow
+set splitright
 
 "Plugins" 
 call plug#begin('~/.vim/plugged')
