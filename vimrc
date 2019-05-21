@@ -21,3 +21,5 @@ let g:gruvbox_contrast_dark = 'hard'
 noremap tn :tabnew<Space> 
 noremap tk :tabnext<CR> 
 noremap tj :tabprev<CR> 
+
+map <F6> :setlocal spell~ spelllang=en_us<CR> 
