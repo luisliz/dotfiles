@@ -20,6 +20,7 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 let g:gruvbox_contrast_dark = 'hard' 
+let g:ctrlp_use_caching = 0
 
 "***NO REMAPS***" 
 "Tab remaps" 
