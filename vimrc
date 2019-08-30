@@ -4,6 +4,7 @@ set number
 set cursorline 
 set splitbelow
 set splitright
+set tabstop=4
 
 "Plugins" 
 call plug#begin('~/.vim/plugged')
@@ -44,3 +45,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 "spell check english" 
 map <F6> :setlocal spell! spelllang=en_us<CR> 
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"

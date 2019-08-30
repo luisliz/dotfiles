@@ -118,3 +118,9 @@ source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
 POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
 POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
 POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/luisliz/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/luisliz/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/luisliz/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/luisliz/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
