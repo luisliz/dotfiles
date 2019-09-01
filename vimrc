@@ -4,7 +4,7 @@ set number
 set cursorline 
 set splitbelow
 set splitright
-set tabstop=4
+set tabstop=2
 
 "Plugins" 
 call plug#begin('~/.vim/plugged')
