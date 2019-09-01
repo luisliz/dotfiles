@@ -37,6 +37,9 @@ nnoremap <C-H> <C-W><C-H>
 "spell check english" 
 map <F6> :setlocal spell! spelllang=en_us<CR> 
 
+"save and compile c code" 
+map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
