@@ -21,6 +21,7 @@ colorscheme gruvbox
 set background=dark
 let g:gruvbox_contrast_dark = 'hard' 
 let g:ctrlp_use_caching = 0
+let g:ycm_global_ycm_extra_conf = '~/dotfiles/vim/plugged/youcompleteme/.ycm_extra_conf.py'
 
 "***NO REMAPS***" 
 "Tab remaps" 
@@ -52,3 +53,5 @@ map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+
