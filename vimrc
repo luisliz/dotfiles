@@ -14,6 +14,7 @@ Plug 'https://github.com/terryma/vim-multiple-cursors.git'
 Plug 'https://github.com/morhetz/gruvbox.git' 
 Plug 'valloric/youcompleteme'
 Plug 'lervag/vimtex'
+Plug 'elzr/vim-json'
 call plug#end() 
 
 "Theme" 
