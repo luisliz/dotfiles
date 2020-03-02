@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,7 +15,7 @@ export ZSH="/Users/luisliz/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -20,8 +27,7 @@ ZSH_THEME="robbyrussell"
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+# Case-sensitive completion must be off. _ and - will be interchangeable.  # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -70,6 +76,7 @@ plugins=(
   rake
   rbenv
   ruby
+	zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -102,25 +109,30 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-POWERLEVEL9k_MODE='nerdfont-complete'
-source  ~/powerlevel9k/powerlevel9k.zsh-theme
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status custom_javascript)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-alias ls='ls -G'
-
-# Load Zsh tools for syntax highlighting and autosuggestions
-HOMEBREW_FOLDER="/usr/local/share"
-source "$HOMEBREW_FOLDER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
-
-#Custom powerlevel9k 
-POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
-POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
+POWERLEVEL9k_MODE='awesome-patched'
+#source  ~/powerlevel9k/powerlevel9k.zsh-theme
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status custom_javascript)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+#POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+#alias ls='ls -G'
+#
+## Load Zsh tools for syntax highlighting and autosuggestions
+#HOMEBREW_FOLDER="/usr/local/share"
+#source "$HOMEBREW_FOLDER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+#source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
+#
+##Custom powerlevel9k 
+#POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
+#POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
+#POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/luisliz/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/luisliz/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/luisliz/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/luisliz/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
