@@ -77,6 +77,7 @@ plugins=(
   rbenv
   ruby
 	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,32 +112,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 POWERLEVEL9k_MODE='awesome-patched'
 #source  ~/powerlevel9k/powerlevel9k.zsh-theme
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status custom_javascript)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-#POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-#alias ls='ls -G'
-#
-## Load Zsh tools for syntax highlighting and autosuggestions
-#HOMEBREW_FOLDER="/usr/local/share"
-#source "$HOMEBREW_FOLDER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-#source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
-#
-##Custom powerlevel9k 
-#POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
-#POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
-#POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/luisliz/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/luisliz/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/luisliz/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/luisliz/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+eval "$(pyenv init -)"
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/luisliz/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/luisliz/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/luisliz/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/luisliz/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
